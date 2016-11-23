@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  MarvelApp
 //
-//  Created by BK Channels on 22/11/16.
+//  Created by Norberto Vasconcelos on 22/11/16.
 //  Copyright © 2016 Norberto. All rights reserved.
 //
 
@@ -10,16 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - View Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        self.callService()
+    
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK: - Service calls
+    func callService() {
+        APIManager
+            .shared
+            .request(service: MarvelService.getCharacters(),
+                     completion: { value in
+                        let respObject = GetCharactersResponse(JSON: value)
+                        
+                    })
     }
-
-
 }
-

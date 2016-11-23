@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MarvelApp
 //
-//  Created by BK Channels on 22/11/16.
+//  Created by Norberto Vasconcelos on 22/11/16.
 //  Copyright © 2016 Norberto. All rights reserved.
 //
 

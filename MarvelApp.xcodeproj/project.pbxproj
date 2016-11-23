@@ -11,7 +11,6 @@
 		6DA28493A20D952FB9ED4D12 /* Pods_MarvelAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8EB7A5E9823106E3A817DC /* Pods_MarvelAppTests.framework */; };
 		B2830ABE0A1CBA642114126F /* Pods_MarvelApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344980B3EE9340B99FF426E6 /* Pods_MarvelApp.framework */; };
 		FBA5D0251DE46361008782E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5D0241DE46361008782E6 /* AppDelegate.swift */; };
-		FBA5D0271DE46361008782E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5D0261DE46361008782E6 /* ViewController.swift */; };
 		FBA5D02C1DE46361008782E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBA5D02B1DE46361008782E6 /* Assets.xcassets */; };
 		FBA5D03A1DE46361008782E6 /* MarvelAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5D0391DE46361008782E6 /* MarvelAppTests.swift */; };
 		FBA5D0451DE46361008782E6 /* MarvelAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5D0441DE46361008782E6 /* MarvelAppUITests.swift */; };
@@ -38,6 +37,15 @@
 		FBC792581DE5EA500065132B /* MarvelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC792571DE5EA500065132B /* MarvelData.swift */; };
 		FBC792591DE5EA500065132B /* MarvelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC792571DE5EA500065132B /* MarvelData.swift */; };
 		FBC7925A1DE5EA500065132B /* MarvelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC792571DE5EA500065132B /* MarvelData.swift */; };
+		FBC792611DE5F7490065132B /* CharacterGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC792601DE5F7490065132B /* CharacterGroupViewController.swift */; };
+		FBC792621DE5F8220065132B /* CharacterGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC792601DE5F7490065132B /* CharacterGroupViewController.swift */; };
+		FBC792631DE5F8230065132B /* CharacterGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC792601DE5F7490065132B /* CharacterGroupViewController.swift */; };
+		FBC7926A1DE5FE110065132B /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC792681DE5FE110065132B /* CharacterTableViewCell.swift */; };
+		FBC7926B1DE5FE110065132B /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC792681DE5FE110065132B /* CharacterTableViewCell.swift */; };
+		FBC7926C1DE5FE110065132B /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC792681DE5FE110065132B /* CharacterTableViewCell.swift */; };
+		FBC7926D1DE5FE110065132B /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC792691DE5FE110065132B /* CharacterTableViewCell.xib */; };
+		FBC7926E1DE5FE110065132B /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC792691DE5FE110065132B /* CharacterTableViewCell.xib */; };
+		FBC7926F1DE5FE110065132B /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC792691DE5FE110065132B /* CharacterTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +75,6 @@
 		DC5921ACB43CC14000BCA4ED /* Pods-MarvelApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApp/Pods-MarvelApp.release.xcconfig"; sourceTree = "<group>"; };
 		FBA5D0211DE46361008782E6 /* MarvelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA5D0241DE46361008782E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FBA5D0261DE46361008782E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FBA5D02B1DE46361008782E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBA5D0301DE46361008782E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBA5D0351DE46361008782E6 /* MarvelAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,9 +92,12 @@
 		FBC7924E1DE5B2DC0065132B /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Character.swift; path = Source/Models/Character.swift; sourceTree = "<group>"; };
 		FBC792531DE5BE230065132B /* GetCharactersResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetCharactersResponse.swift; path = Source/Models/ServiceResponseModels/GetCharactersResponse.swift; sourceTree = "<group>"; };
 		FBC792571DE5EA500065132B /* MarvelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarvelData.swift; path = Source/Models/MarvelData.swift; sourceTree = "<group>"; };
-		FBC7925C1DE5EDF40065132B /* MarvelApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MarvelApp-Bridging-Header.h"; path = "Bridging-Header/MarvelApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		FBC7925D1DE5EDF40065132B /* MarvelAppTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MarvelAppTests-Bridging-Header.h"; path = "Bridging-Header/MarvelAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		FBC7925E1DE5EDF40065132B /* MarvelAppUITests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MarvelAppUITests-Bridging-Header.h"; path = "Bridging-Header/MarvelAppUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		FBC792601DE5F7490065132B /* CharacterGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterGroupViewController.swift; path = Source/ViewControllers/CharacterGroupViewController.swift; sourceTree = "<group>"; };
+		FBC792641DE5F9080065132B /* MarvelApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MarvelApp-Bridging-Header.h"; path = "MarvelApp/Bridging-Headers/MarvelApp-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		FBC792651DE5F9080065132B /* MarvelAppTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MarvelAppTests-Bridging-Header.h"; path = "Bridging-Headers/MarvelAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		FBC792661DE5F9080065132B /* MarvelAppUITests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MarvelAppUITests-Bridging-Header.h"; path = "Bridging-Headers/MarvelAppUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		FBC792681DE5FE110065132B /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterTableViewCell.swift; path = Source/TableViewCells/CharacterTableViewCell.swift; sourceTree = "<group>"; };
+		FBC792691DE5FE110065132B /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CharacterTableViewCell.xib; path = Source/TableViewCells/CharacterTableViewCell.xib; sourceTree = "<group>"; };
 		FF94A672C0C179BB0C3D9813 /* Pods-MarvelAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAppUITests/Pods-MarvelAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FFA528BF3AECE8C265952FDE /* Pods-MarvelAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAppUITests/Pods-MarvelAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,7 +182,6 @@
 				FBA5D0541DE47190008782E6 /* Source */,
 				FBA5D0531DE47167008782E6 /* Utils */,
 				FBA5D0241DE46361008782E6 /* AppDelegate.swift */,
-				FBA5D0261DE46361008782E6 /* ViewController.swift */,
 				FBA5D02B1DE46361008782E6 /* Assets.xcassets */,
 				FBA5D0301DE46361008782E6 /* Info.plist */,
 			);
@@ -217,6 +226,7 @@
 		FBA5D0541DE47190008782E6 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				FBC792671DE5FDC40065132B /* TableViewCells */,
 				FBC7925F1DE5EE050065132B /* ViewControllers */,
 				FBC7925B1DE5EDB90065132B /* Bridging-Headers */,
 				FBC7924D1DE5B2930065132B /* Models */,
@@ -280,9 +290,9 @@
 		FBC7925B1DE5EDB90065132B /* Bridging-Headers */ = {
 			isa = PBXGroup;
 			children = (
-				FBC7925C1DE5EDF40065132B /* MarvelApp-Bridging-Header.h */,
-				FBC7925D1DE5EDF40065132B /* MarvelAppTests-Bridging-Header.h */,
-				FBC7925E1DE5EDF40065132B /* MarvelAppUITests-Bridging-Header.h */,
+				FBC792641DE5F9080065132B /* MarvelApp-Bridging-Header.h */,
+				FBC792651DE5F9080065132B /* MarvelAppTests-Bridging-Header.h */,
+				FBC792661DE5F9080065132B /* MarvelAppUITests-Bridging-Header.h */,
 			);
 			name = "Bridging-Headers";
 			sourceTree = "<group>";
@@ -290,8 +300,18 @@
 		FBC7925F1DE5EE050065132B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FBC792601DE5F7490065132B /* CharacterGroupViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FBC792671DE5FDC40065132B /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FBC792681DE5FE110065132B /* CharacterTableViewCell.swift */,
+				FBC792691DE5FE110065132B /* CharacterTableViewCell.xib */,
+			);
+			name = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +436,7 @@
 				FBA5D05D1DE47289008782E6 /* Main.storyboard in Resources */,
 				FBA5D02C1DE46361008782E6 /* Assets.xcassets in Resources */,
 				FBA5D05C1DE47289008782E6 /* LaunchScreen.storyboard in Resources */,
+				FBC7926D1DE5FE110065132B /* CharacterTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +444,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBC7926E1DE5FE110065132B /* CharacterTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +452,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBC7926F1DE5FE110065132B /* CharacterTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,14 +602,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBC7924A1DE5A7E10065132B /* APIManager.swift in Sources */,
-				FBA5D0271DE46361008782E6 /* ViewController.swift in Sources */,
 				FBC7924F1DE5B2DC0065132B /* Character.swift in Sources */,
 				FBA5D0771DE59A41008782E6 /* MarvelService.swift in Sources */,
 				FBA5D0251DE46361008782E6 /* AppDelegate.swift in Sources */,
 				FBC792541DE5BE230065132B /* GetCharactersResponse.swift in Sources */,
 				FBC792461DE5A3F90065132B /* MarvelSession.swift in Sources */,
 				FBC792581DE5EA500065132B /* MarvelData.swift in Sources */,
+				FBC7926A1DE5FE110065132B /* CharacterTableViewCell.swift in Sources */,
 				FBA5D0731DE5998C008782E6 /* String+Utils.swift in Sources */,
+				FBC792611DE5F7490065132B /* CharacterGroupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,7 +625,9 @@
 				FBC792501DE5B2DC0065132B /* Character.swift in Sources */,
 				FBA5D0781DE59A41008782E6 /* MarvelService.swift in Sources */,
 				FBA5D03A1DE46361008782E6 /* MarvelAppTests.swift in Sources */,
+				FBC7926B1DE5FE110065132B /* CharacterTableViewCell.swift in Sources */,
 				FBC792591DE5EA500065132B /* MarvelData.swift in Sources */,
+				FBC792621DE5F8220065132B /* CharacterGroupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,7 +642,9 @@
 				FBC792511DE5B2DC0065132B /* Character.swift in Sources */,
 				FBA5D0791DE59A41008782E6 /* MarvelService.swift in Sources */,
 				FBA5D0451DE46361008782E6 /* MarvelAppUITests.swift in Sources */,
+				FBC7926C1DE5FE110065132B /* CharacterTableViewCell.swift in Sources */,
 				FBC7925A1DE5EA500065132B /* MarvelData.swift in Sources */,
+				FBC792631DE5F8230065132B /* CharacterGroupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,7 +787,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nvasconcelos.MarvelApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MarvelApp/MarvelApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarvelApp/Bridging-Headers/MarvelApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -776,7 +804,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nvasconcelos.MarvelApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MarvelApp/MarvelApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarvelApp/Bridging-Headers/MarvelApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -792,7 +820,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nvasconcelos.MarvelAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MarvelApp/MarvelAppTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarvelApp/Bridging-Headers/MarvelApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarvelApp.app/MarvelApp";
@@ -810,7 +838,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nvasconcelos.MarvelAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MarvelApp/MarvelAppTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarvelApp/Bridging-Headers/MarvelApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarvelApp.app/MarvelApp";
 			};
@@ -826,7 +854,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nvasconcelos.MarvelAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MarvelApp/MarvelAppUITests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarvelApp/Bridging-Headers/MarvelApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = MarvelApp;
@@ -843,7 +871,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nvasconcelos.MarvelAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MarvelApp/MarvelAppUITests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarvelApp/Bridging-Headers/MarvelApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = MarvelApp;
 			};

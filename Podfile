@@ -7,6 +7,8 @@ target 'MarvelApp' do
   # Pods for MarvelApp
 	pod 'Alamofire', '~> 4.0'
     pod 'ObjectMapper', '~> 2.2'
+    pod 'RxSwift',    '~> 3.0'
+    pod 'RxCocoa',    '~> 3.0'
 
   target 'MarvelAppTests' do
     inherit! :search_paths

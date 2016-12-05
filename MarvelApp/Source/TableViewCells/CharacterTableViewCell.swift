@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CharacterTableViewCell: UITableViewCell {
 
@@ -26,6 +27,13 @@ class CharacterTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func config(with character: Character) {
+        self.lblName.text = character.name
+        self.lblDescription.text = character.description
+        let url = URL(string: character.resourceURI ?? "")
+        imageView?.kf.setImage(with:url)
     }
     
 }

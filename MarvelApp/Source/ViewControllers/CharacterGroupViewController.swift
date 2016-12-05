@@ -10,14 +10,27 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class CharacterGroupViewController: UIViewController {
+class CharacterGroupViewController: UIViewController, UITableViewDelegate {
 
     // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var btnSearch: UIBarButtonItem!
     // MARK: Variables
-    var allCharacters: [Character]?
-    var characters: [Character]?
+    var allCharacters: [Character] = [] {
+        didSet {
+            characters = Variable<[Character]>.init(allCharacters)
+        }
+    }
+    var characters: Variable<[Character]> = Variable<[Character]>.init([]) {
+        didSet {
+            characters
+                .asDriver()
+                .drive(tableView.rx.items(cellIdentifier: "CharacterTableViewCell", cellType: CharacterTableViewCell.self)) { (_, character, cell) in
+                    cell.config(with: character)
+                }
+                .addDisposableTo(disposeBag)
+        }
+    }
     var disposeBag: DisposeBag = DisposeBag()
     
     // MARK: - View Lifecycle -
@@ -31,10 +44,15 @@ class CharacterGroupViewController: UIViewController {
     
     // MARK: - Table View -
     func setupTableView() {
-//        characters.bindTo(tableView.rx.items(cellIdentifier: "CharacterTableViewCell")) { index, model, cell in
-//            cell.lblName?.text = model
-//            }
-//            .addDisposableTo(disposeBag)
+        
+        // Sets self as tableview delegate
+        tableView
+            .rx
+            .setDelegate(self)
+            .addDisposableTo(disposeBag)
+        
+        tableView.register(UINib(nibName: "CharacterTableViewCell", bundle: nil), forCellReuseIdentifier: "CharacterTableViewCell")
+        
     }
     
     // MARK: - Service calls -
@@ -44,6 +62,7 @@ class CharacterGroupViewController: UIViewController {
             .request(service: MarvelService.getCharacters(),
                      completion: { [weak self] value in
                         let respObject = GetCharactersResponse(JSON: value)
-                    })
+                        self?.allCharacters = respObject?.data?.results ?? []
+            })
     }
 }

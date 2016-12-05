@@ -5,57 +5,70 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="CharacterTableViewCell" customModule="MarvelApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterTableViewCell" rowHeight="240" id="KGk-i7-Jjw" customClass="CharacterTableViewCell" customModule="MarvelApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="238"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="237"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buK-sb-Nva">
-                        <rect key="frame" x="8" y="8" width="224" height="17.5"/>
-                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOr-d7-dSD">
-                        <rect key="frame" x="8" y="33.5" width="224" height="18"/>
-                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oOu-yA-iyO">
-                        <rect key="frame" x="240" y="0.0" width="80" height="80"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="oOu-yA-iyO" secondAttribute="height" multiplier="1:1" id="82R-Cu-f4f"/>
-                        </constraints>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="237"/>
+                        <color key="backgroundColor" red="0.14901960780000001" green="0.65098039220000004" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
+                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIB-yN-XvI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="237.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOr-d7-dSD">
+                        <rect key="frame" x="16" y="41.5" width="288" height="180"/>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buK-sb-Nva">
+                        <rect key="frame" x="16" y="16" width="288" height="17.5"/>
+                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="oOu-yA-iyO" secondAttribute="trailing" id="204-g7-EBq"/>
-                    <constraint firstAttribute="bottom" secondItem="oOu-yA-iyO" secondAttribute="bottom" id="CTF-pg-FZf"/>
-                    <constraint firstItem="MOr-d7-dSD" firstAttribute="top" secondItem="buK-sb-Nva" secondAttribute="bottom" constant="8" id="GU9-yA-5qq"/>
-                    <constraint firstItem="oOu-yA-iyO" firstAttribute="leading" secondItem="buK-sb-Nva" secondAttribute="trailing" constant="8" id="OEV-5M-yCZ"/>
-                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="MOr-d7-dSD" secondAttribute="bottom" priority="750" constant="28" id="QRB-SD-cQB"/>
-                    <constraint firstItem="buK-sb-Nva" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="cIS-rZ-41c"/>
-                    <constraint firstItem="oOu-yA-iyO" firstAttribute="leading" secondItem="MOr-d7-dSD" secondAttribute="trailing" constant="8" id="e1w-cB-KHz"/>
-                    <constraint firstItem="oOu-yA-iyO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jmQ-gc-gTL"/>
-                    <constraint firstItem="buK-sb-Nva" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="qrH-rP-8Lo"/>
-                    <constraint firstItem="MOr-d7-dSD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="yFT-ST-ybv"/>
+                    <constraint firstItem="buK-sb-Nva" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="0Hv-7r-Kb8"/>
+                    <constraint firstItem="buK-sb-Nva" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1UK-Eb-5rm"/>
+                    <constraint firstItem="oOu-yA-iyO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4KL-tM-jeY"/>
+                    <constraint firstAttribute="trailing" secondItem="vIB-yN-XvI" secondAttribute="trailing" id="Bbv-b8-ZBm"/>
+                    <constraint firstItem="vIB-yN-XvI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="C6f-ug-MRF"/>
+                    <constraint firstItem="MOr-d7-dSD" firstAttribute="top" secondItem="buK-sb-Nva" secondAttribute="bottom" constant="8" id="DE6-7z-Rwq"/>
+                    <constraint firstAttribute="trailing" secondItem="oOu-yA-iyO" secondAttribute="trailing" id="GQM-es-35m"/>
+                    <constraint firstAttribute="bottom" secondItem="vIB-yN-XvI" secondAttribute="bottom" id="Hmr-I9-FKa"/>
+                    <constraint firstAttribute="trailing" secondItem="MOr-d7-dSD" secondAttribute="trailing" constant="16" id="JMZ-Qx-0CL"/>
+                    <constraint firstItem="MOr-d7-dSD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Med-0t-x4g"/>
+                    <constraint firstAttribute="bottom" secondItem="MOr-d7-dSD" secondAttribute="bottom" constant="16" id="MgL-Z0-uP4"/>
+                    <constraint firstItem="vIB-yN-XvI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OTv-Lk-kNS"/>
+                    <constraint firstItem="oOu-yA-iyO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="SaG-LN-DET"/>
+                    <constraint firstAttribute="bottom" secondItem="oOu-yA-iyO" secondAttribute="bottom" id="X9r-0a-RXb"/>
+                    <constraint firstAttribute="trailing" secondItem="buK-sb-Nva" secondAttribute="trailing" constant="16" id="gql-2N-YWV"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="imgPicture" destination="oOu-yA-iyO" id="E2W-I8-svx"/>
                 <outlet property="lblDescription" destination="MOr-d7-dSD" id="V9F-5y-pft"/>
                 <outlet property="lblName" destination="buK-sb-Nva" id="Y74-8g-syo"/>
             </connections>
-            <point key="canvasLocation" x="34" y="72"/>
+            <point key="canvasLocation" x="34" y="151"/>
         </tableViewCell>
     </objects>
 </document>

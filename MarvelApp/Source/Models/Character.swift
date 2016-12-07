@@ -16,9 +16,10 @@ struct Character: Mappable {
     var description: String?
     var modified: Date?
     var resourceURI: String?
+    var thumbnail: Image?
+
     // Finish these
     var urls: [Any]?
-    var thumbnail: [Any]?
     var comics: [Any]?
     var stories: [Any]?
     var events: [Any]?

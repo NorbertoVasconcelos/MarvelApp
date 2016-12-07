@@ -32,8 +32,15 @@ class CharacterTableViewCell: UITableViewCell {
     func config(with character: Character) {
         self.lblName.text = character.name
         self.lblDescription.text = character.description
-        let url = URL(string: character.resourceURI ?? "")
-        imageView?.kf.setImage(with:url)
+        if let url = URL(string: character.thumbnail?.pathForType(type: .portraitMedium) ?? "") {
+            print(url)
+//            imgPicture.kf.setImage(with:url)
+            imgPicture.kf.setImage(with: url,
+                                   placeholder: #imageLiteral(resourceName: "img_not_found"),
+                                   options: nil,
+                                   progressBlock: nil,
+                                   completionHandler: nil)
+        }
     }
     
 }

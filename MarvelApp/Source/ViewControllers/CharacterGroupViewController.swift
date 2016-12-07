@@ -66,3 +66,11 @@ class CharacterGroupViewController: UIViewController, UITableViewDelegate {
             })
     }
 }
+
+// TODO: Place this somewhere better
+extension UITableView {
+    
+    func dequeueCell<T: UITableViewCell>(withIdentifier identifier: String, for indexPath: IndexPath) -> T {
+        return dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! T
+    }
+}

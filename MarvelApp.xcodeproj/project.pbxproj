@@ -13,6 +13,9 @@
 		FB8932B91DF5DCE500F0E845 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8932B81DF5DCE500F0E845 /* UIView+Utils.swift */; };
 		FB8932BA1DF5DCE500F0E845 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8932B81DF5DCE500F0E845 /* UIView+Utils.swift */; };
 		FB8932BB1DF5DCE500F0E845 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8932B81DF5DCE500F0E845 /* UIView+Utils.swift */; };
+		FB8932BD1DF87CEB00F0E845 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8932BC1DF87CEB00F0E845 /* Image.swift */; };
+		FB8932BE1DF87CEB00F0E845 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8932BC1DF87CEB00F0E845 /* Image.swift */; };
+		FB8932BF1DF87CEB00F0E845 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8932BC1DF87CEB00F0E845 /* Image.swift */; };
 		FBA5D0251DE46361008782E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5D0241DE46361008782E6 /* AppDelegate.swift */; };
 		FBA5D02C1DE46361008782E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBA5D02B1DE46361008782E6 /* Assets.xcassets */; };
 		FBA5D03A1DE46361008782E6 /* MarvelAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5D0391DE46361008782E6 /* MarvelAppTests.swift */; };
@@ -77,6 +80,7 @@
 		9EDCE45E79B89A46798EC619 /* Pods-MarvelAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAppTests/Pods-MarvelAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC5921ACB43CC14000BCA4ED /* Pods-MarvelApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApp/Pods-MarvelApp.release.xcconfig"; sourceTree = "<group>"; };
 		FB8932B81DF5DCE500F0E845 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Utils.swift"; path = "Utils/Extensions/UIView+Utils.swift"; sourceTree = "<group>"; };
+		FB8932BC1DF87CEB00F0E845 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Source/Models/Image.swift; sourceTree = "<group>"; };
 		FBA5D0211DE46361008782E6 /* MarvelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA5D0241DE46361008782E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBA5D02B1DE46361008782E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -280,6 +284,7 @@
 				FBC792521DE5BDEA0065132B /* ServiceResponseModels */,
 				FBC7924E1DE5B2DC0065132B /* Character.swift */,
 				FBC792571DE5EA500065132B /* MarvelData.swift */,
+				FB8932BC1DF87CEB00F0E845 /* Image.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -608,6 +613,7 @@
 			files = (
 				FBC7924A1DE5A7E10065132B /* APIManager.swift in Sources */,
 				FBC7924F1DE5B2DC0065132B /* Character.swift in Sources */,
+				FB8932BD1DF87CEB00F0E845 /* Image.swift in Sources */,
 				FBA5D0771DE59A41008782E6 /* MarvelService.swift in Sources */,
 				FBA5D0251DE46361008782E6 /* AppDelegate.swift in Sources */,
 				FBC792541DE5BE230065132B /* GetCharactersResponse.swift in Sources */,
@@ -626,6 +632,7 @@
 			files = (
 				FBA5D0741DE5998C008782E6 /* String+Utils.swift in Sources */,
 				FBC792471DE5A3F90065132B /* MarvelSession.swift in Sources */,
+				FB8932BE1DF87CEB00F0E845 /* Image.swift in Sources */,
 				FBC792551DE5BE230065132B /* GetCharactersResponse.swift in Sources */,
 				FBC7924B1DE5A7E10065132B /* APIManager.swift in Sources */,
 				FBC792501DE5B2DC0065132B /* Character.swift in Sources */,
@@ -644,6 +651,7 @@
 			files = (
 				FBA5D0751DE5998C008782E6 /* String+Utils.swift in Sources */,
 				FBC792481DE5A3F90065132B /* MarvelSession.swift in Sources */,
+				FB8932BF1DF87CEB00F0E845 /* Image.swift in Sources */,
 				FBC792561DE5BE230065132B /* GetCharactersResponse.swift in Sources */,
 				FBC7924C1DE5A7E10065132B /* APIManager.swift in Sources */,
 				FBC792511DE5B2DC0065132B /* Character.swift in Sources */,

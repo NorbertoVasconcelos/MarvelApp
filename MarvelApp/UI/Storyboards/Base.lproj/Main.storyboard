@@ -46,12 +46,23 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <sections/>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Find your Hero!" translatesAutoresizingMaskIntoConstraints="NO" id="WOg-5Q-7G2">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="W6X-gL-NQV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4sF-f8-xgT"/>
+                            <constraint firstItem="WOg-5Q-7G2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6QW-gl-D5y"/>
                             <constraint firstAttribute="trailing" secondItem="W6X-gL-NQV" secondAttribute="trailing" id="C7z-Tj-RIf"/>
+                            <constraint firstItem="WOg-5Q-7G2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="E28-3S-0f3"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W6X-gL-NQV" secondAttribute="bottom" id="LNa-ex-e9i"/>
+                            <constraint firstAttribute="trailing" secondItem="WOg-5Q-7G2" secondAttribute="trailing" id="RBU-5x-GDa"/>
                             <constraint firstItem="W6X-gL-NQV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="okH-fL-yCu"/>
                         </constraints>
                     </view>
@@ -62,6 +73,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btnSearch" destination="UXV-OU-KUz" id="8WL-Ek-4eW"/>
+                        <outlet property="searchBar" destination="WOg-5Q-7G2" id="mFp-j8-qRO"/>
                         <outlet property="tableView" destination="W6X-gL-NQV" id="ymo-bR-6yQ"/>
                         <segue destination="E98-5K-NNp" kind="show" identifier="CharacterDetail" id="LUe-z5-yXA"/>
                     </connections>

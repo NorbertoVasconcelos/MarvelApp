@@ -10,7 +10,7 @@ import Foundation
 
 // Marvel API
 enum MarvelService {
-    case getCharacters()
+    case getCharacters(offset: Int)
 }
 
 extension MarvelService {
@@ -31,7 +31,7 @@ extension MarvelService {
     // API call path to complete request url
     var path: String {
         switch self {
-            case .getCharacters():
+            case .getCharacters(_):
             return "/v1/public/characters"
         }
     }
@@ -43,12 +43,13 @@ extension MarvelService {
     
     // Parameters to be placed in the header request
     var parameters: [String : AnyObject] {
-        let params = createDefaultParameters()
+        var params = createDefaultParameters()
         
         // Add any aditional parameters, depending on the request
         switch self {
-        case .getCharacters(): break
-            
+        case .getCharacters(let offset):
+            params.updateValue(offset as AnyObject, forKey: "offset")
+            break
         }
         
         return params

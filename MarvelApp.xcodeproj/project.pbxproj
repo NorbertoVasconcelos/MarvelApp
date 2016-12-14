@@ -13,15 +13,18 @@
 		FB35678E1E0183590057AA7F /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35678C1E0183590057AA7F /* TextTableViewCell.swift */; };
 		FB35678F1E0183590057AA7F /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35678C1E0183590057AA7F /* TextTableViewCell.swift */; };
 		FB3567901E0183590057AA7F /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35678C1E0183590057AA7F /* TextTableViewCell.swift */; };
-		FB3567911E0183590057AA7F /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB35678D1E0183590057AA7F /* TextTableViewCell.xib */; };
-		FB3567921E0183590057AA7F /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB35678D1E0183590057AA7F /* TextTableViewCell.xib */; };
-		FB3567931E0183590057AA7F /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB35678D1E0183590057AA7F /* TextTableViewCell.xib */; };
 		FB3567961E019A6E0057AA7F /* CharacterDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3567951E019A6E0057AA7F /* CharacterDetailHeaderView.xib */; };
 		FB3567971E019A6E0057AA7F /* CharacterDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3567951E019A6E0057AA7F /* CharacterDetailHeaderView.xib */; };
 		FB3567981E019A6E0057AA7F /* CharacterDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3567951E019A6E0057AA7F /* CharacterDetailHeaderView.xib */; };
 		FB35679B1E019B760057AA7F /* CharacterDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35679A1E019B760057AA7F /* CharacterDetailHeaderView.swift */; };
 		FB35679C1E019B760057AA7F /* CharacterDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35679A1E019B760057AA7F /* CharacterDetailHeaderView.swift */; };
 		FB35679D1E019B760057AA7F /* CharacterDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35679A1E019B760057AA7F /* CharacterDetailHeaderView.swift */; };
+		FB3567A11E01AE9A0057AA7F /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB35679F1E01AE9A0057AA7F /* CharacterTableViewCell.xib */; };
+		FB3567A21E01AE9A0057AA7F /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB35679F1E01AE9A0057AA7F /* CharacterTableViewCell.xib */; };
+		FB3567A31E01AE9A0057AA7F /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB35679F1E01AE9A0057AA7F /* CharacterTableViewCell.xib */; };
+		FB3567A41E01AE9A0057AA7F /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3567A01E01AE9A0057AA7F /* TextTableViewCell.xib */; };
+		FB3567A51E01AE9A0057AA7F /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3567A01E01AE9A0057AA7F /* TextTableViewCell.xib */; };
+		FB3567A61E01AE9A0057AA7F /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3567A01E01AE9A0057AA7F /* TextTableViewCell.xib */; };
 		FB8932B91DF5DCE500F0E845 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8932B81DF5DCE500F0E845 /* UIView+Utils.swift */; };
 		FB8932BA1DF5DCE500F0E845 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8932B81DF5DCE500F0E845 /* UIView+Utils.swift */; };
 		FB8932BB1DF5DCE500F0E845 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8932B81DF5DCE500F0E845 /* UIView+Utils.swift */; };
@@ -64,9 +67,6 @@
 		FBC7926A1DE5FE110065132B /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC792681DE5FE110065132B /* CharacterTableViewCell.swift */; };
 		FBC7926B1DE5FE110065132B /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC792681DE5FE110065132B /* CharacterTableViewCell.swift */; };
 		FBC7926C1DE5FE110065132B /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC792681DE5FE110065132B /* CharacterTableViewCell.swift */; };
-		FBC7926D1DE5FE110065132B /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC792691DE5FE110065132B /* CharacterTableViewCell.xib */; };
-		FBC7926E1DE5FE110065132B /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC792691DE5FE110065132B /* CharacterTableViewCell.xib */; };
-		FBC7926F1DE5FE110065132B /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC792691DE5FE110065132B /* CharacterTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,9 +95,10 @@
 		9EDCE45E79B89A46798EC619 /* Pods-MarvelAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAppTests/Pods-MarvelAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC5921ACB43CC14000BCA4ED /* Pods-MarvelApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApp/Pods-MarvelApp.release.xcconfig"; sourceTree = "<group>"; };
 		FB35678C1E0183590057AA7F /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextTableViewCell.swift; path = Source/TableViewCells/TextTableViewCell.swift; sourceTree = "<group>"; };
-		FB35678D1E0183590057AA7F /* TextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextTableViewCell.xib; path = Source/TableViewCells/TextTableViewCell.xib; sourceTree = "<group>"; };
 		FB3567951E019A6E0057AA7F /* CharacterDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CharacterDetailHeaderView.xib; path = UI/Headers/CharacterDetailHeaderView.xib; sourceTree = "<group>"; };
 		FB35679A1E019B760057AA7F /* CharacterDetailHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterDetailHeaderView.swift; path = Source/HeaderViews/CharacterDetailHeaderView.swift; sourceTree = "<group>"; };
+		FB35679F1E01AE9A0057AA7F /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CharacterTableViewCell.xib; path = UI/TableViewCells/CharacterTableViewCell.xib; sourceTree = "<group>"; };
+		FB3567A01E01AE9A0057AA7F /* TextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextTableViewCell.xib; path = UI/TableViewCells/TextTableViewCell.xib; sourceTree = "<group>"; };
 		FB8932B81DF5DCE500F0E845 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Utils.swift"; path = "Utils/Extensions/UIView+Utils.swift"; sourceTree = "<group>"; };
 		FB8932BC1DF87CEB00F0E845 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Source/Models/Image.swift; sourceTree = "<group>"; };
 		FB8932C01DF890F600F0E845 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterDetailViewController.swift; path = Source/ViewControllers/CharacterDetailViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +126,6 @@
 		FBC792651DE5F9080065132B /* MarvelAppTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MarvelAppTests-Bridging-Header.h"; path = "Bridging-Headers/MarvelAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FBC792661DE5F9080065132B /* MarvelAppUITests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MarvelAppUITests-Bridging-Header.h"; path = "Bridging-Headers/MarvelAppUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FBC792681DE5FE110065132B /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterTableViewCell.swift; path = Source/TableViewCells/CharacterTableViewCell.swift; sourceTree = "<group>"; };
-		FBC792691DE5FE110065132B /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CharacterTableViewCell.xib; path = Source/TableViewCells/CharacterTableViewCell.xib; sourceTree = "<group>"; };
 		FF94A672C0C179BB0C3D9813 /* Pods-MarvelAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAppUITests/Pods-MarvelAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FFA528BF3AECE8C265952FDE /* Pods-MarvelAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAppUITests/Pods-MarvelAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,6 +195,15 @@
 				FB35679A1E019B760057AA7F /* CharacterDetailHeaderView.swift */,
 			);
 			name = HeaderViews;
+			sourceTree = "<group>";
+		};
+		FB35679E1E01AE4D0057AA7F /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FB35679F1E01AE9A0057AA7F /* CharacterTableViewCell.xib */,
+				FB3567A01E01AE9A0057AA7F /* TextTableViewCell.xib */,
+			);
+			name = TableViewCells;
 			sourceTree = "<group>";
 		};
 		FBA5D0181DE46361008782E6 = {
@@ -284,6 +293,7 @@
 		FBA5D0551DE4719F008782E6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FB35679E1E01AE4D0057AA7F /* TableViewCells */,
 				FB3567941E019A420057AA7F /* Headers */,
 				FBA5D0561DE471BD008782E6 /* Storyboards */,
 			);
@@ -358,9 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				FBC792681DE5FE110065132B /* CharacterTableViewCell.swift */,
-				FBC792691DE5FE110065132B /* CharacterTableViewCell.xib */,
 				FB35678C1E0183590057AA7F /* TextTableViewCell.swift */,
-				FB35678D1E0183590057AA7F /* TextTableViewCell.xib */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -486,10 +494,10 @@
 			files = (
 				FB3567961E019A6E0057AA7F /* CharacterDetailHeaderView.xib in Resources */,
 				FBA5D05D1DE47289008782E6 /* Main.storyboard in Resources */,
-				FB3567911E0183590057AA7F /* TextTableViewCell.xib in Resources */,
+				FB3567A41E01AE9A0057AA7F /* TextTableViewCell.xib in Resources */,
+				FB3567A11E01AE9A0057AA7F /* CharacterTableViewCell.xib in Resources */,
 				FBA5D02C1DE46361008782E6 /* Assets.xcassets in Resources */,
 				FBA5D05C1DE47289008782E6 /* LaunchScreen.storyboard in Resources */,
-				FBC7926D1DE5FE110065132B /* CharacterTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,8 +506,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB3567971E019A6E0057AA7F /* CharacterDetailHeaderView.xib in Resources */,
-				FB3567921E0183590057AA7F /* TextTableViewCell.xib in Resources */,
-				FBC7926E1DE5FE110065132B /* CharacterTableViewCell.xib in Resources */,
+				FB3567A21E01AE9A0057AA7F /* CharacterTableViewCell.xib in Resources */,
+				FB3567A51E01AE9A0057AA7F /* TextTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,8 +516,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB3567981E019A6E0057AA7F /* CharacterDetailHeaderView.xib in Resources */,
-				FB3567931E0183590057AA7F /* TextTableViewCell.xib in Resources */,
-				FBC7926F1DE5FE110065132B /* CharacterTableViewCell.xib in Resources */,
+				FB3567A31E01AE9A0057AA7F /* CharacterTableViewCell.xib in Resources */,
+				FB3567A61E01AE9A0057AA7F /* TextTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

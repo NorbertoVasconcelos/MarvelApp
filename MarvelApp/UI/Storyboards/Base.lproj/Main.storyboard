@@ -12,9 +12,14 @@
         <scene sceneID="NDS-I9-XUa">
             <objects>
                 <navigationController id="ci4-WM-79M" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BKI-j6-eCP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="BKI-j6-eCP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.89019607840000003" green="0.14901960780000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gpb-ih-rlG"/>
@@ -22,7 +27,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Bw-k7-SOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-662" y="139"/>
+            <point key="canvasLocation" x="-633" y="139"/>
         </scene>
         <!--Heroes-->
         <scene sceneID="tne-QT-ifu">
@@ -52,17 +57,56 @@
                     </view>
                     <navigationItem key="navigationItem" title="Heroes" id="7eT-e9-R3y">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="UXV-OU-KUz">
-                            <color key="tintColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="btnSearch" destination="UXV-OU-KUz" id="8WL-Ek-4eW"/>
                         <outlet property="tableView" destination="W6X-gL-NQV" id="ymo-bR-6yQ"/>
+                        <segue destination="E98-5K-NNp" kind="show" identifier="CharacterDetail" id="LUe-z5-yXA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="161" y="139"/>
+        </scene>
+        <!--Character Detail View Controller-->
+        <scene sceneID="5dI-ZE-fCh">
+            <objects>
+                <viewController id="E98-5K-NNp" customClass="CharacterDetailViewController" customModule="MarvelApp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nxe-T4-dm5"/>
+                        <viewControllerLayoutGuide type="bottom" id="GN4-Fa-uMh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8C7-vI-3eK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LEn-Ql-j9M">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GN4-Fa-uMh" firstAttribute="top" secondItem="LEn-Ql-j9M" secondAttribute="bottom" id="JWx-tB-xF8"/>
+                            <constraint firstItem="LEn-Ql-j9M" firstAttribute="leading" secondItem="8C7-vI-3eK" secondAttribute="leading" id="aDT-LE-H5d"/>
+                            <constraint firstItem="LEn-Ql-j9M" firstAttribute="top" secondItem="8C7-vI-3eK" secondAttribute="top" id="hhd-0b-Lg3"/>
+                            <constraint firstAttribute="trailing" secondItem="LEn-Ql-j9M" secondAttribute="trailing" id="nyx-is-lBk"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="LEn-Ql-j9M" id="RbV-2r-fTW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qzp-Y3-Fbs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917.60000000000002" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

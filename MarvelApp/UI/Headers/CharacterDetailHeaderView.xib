@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="CharacterDetailHeaderView" customModule="MarvelApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_not_found" translatesAutoresizingMaskIntoConstraints="NO" id="fdY-y5-Jlp">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="fdY-y5-Jlp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HXl-aC-iM9"/>
+                <constraint firstItem="fdY-y5-Jlp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gtX-xr-cQl"/>
+                <constraint firstAttribute="bottom" secondItem="fdY-y5-Jlp" secondAttribute="bottom" id="lYb-G3-uvK"/>
+                <constraint firstAttribute="trailing" secondItem="fdY-y5-Jlp" secondAttribute="trailing" id="tyh-oz-YCt"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="image" destination="fdY-y5-Jlp" id="1AR-90-hf4"/>
+            </connections>
+            <point key="canvasLocation" x="49.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_not_found" width="108" height="162"/>
+    </resources>
+</document>

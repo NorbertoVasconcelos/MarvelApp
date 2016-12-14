@@ -32,6 +32,7 @@ class CharacterGroupViewController: UIViewController, UITableViewDelegate {
         }
     }
     var disposeBag: DisposeBag = DisposeBag()
+    var selectedCharacter: Character?
     
     // MARK: - View Lifecycle -
     override func viewDidLoad() {
@@ -53,6 +54,16 @@ class CharacterGroupViewController: UIViewController, UITableViewDelegate {
         
         tableView.register(UINib(nibName: "CharacterTableViewCell", bundle: nil), forCellReuseIdentifier: "CharacterTableViewCell")
         
+        tableView
+            .rx
+            .modelSelected(Character.self)
+            .subscribe( onNext: {
+                [weak self] character in
+                self?.selectedCharacter = character
+                self?.performSegue(withIdentifier: "CharacterDetail", sender: self)
+            })
+            .addDisposableTo(disposeBag)
+        
     }
     
     // MARK: - Service calls -
@@ -64,6 +75,15 @@ class CharacterGroupViewController: UIViewController, UITableViewDelegate {
                         let respObject = GetCharactersResponse(JSON: value)
                         self?.allCharacters = respObject?.data?.results ?? []
             })
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "CharacterDetail" {
+            if let vc = segue.destination as? CharacterDetailViewController {
+                vc.character = selectedCharacter
+            }
+        }
     }
 }
 

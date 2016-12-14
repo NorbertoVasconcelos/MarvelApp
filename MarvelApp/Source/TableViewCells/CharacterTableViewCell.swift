@@ -34,7 +34,6 @@ class CharacterTableViewCell: UITableViewCell {
         self.lblDescription.text = character.description
         if let url = URL(string: character.thumbnail?.pathForType(type: .portraitMedium) ?? "") {
             print(url)
-//            imgPicture.kf.setImage(with:url)
             imgPicture.kf.setImage(with: url,
                                    placeholder: #imageLiteral(resourceName: "img_not_found"),
                                    options: nil,

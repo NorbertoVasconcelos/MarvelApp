@@ -19,19 +19,11 @@ class CharacterGroupViewController: UIViewController, UITableViewDelegate {
     // MARK: Variables
     var allCharacters: [Character] = [] {
         didSet {
-            characters = Variable<[Character]>.init(allCharacters)
+            characters.value = allCharacters
+            print("Did set Characters!")
         }
     }
-    var characters: Variable<[Character]> = Variable<[Character]>.init([]) {
-        didSet {
-            characters
-                .asDriver()
-                .drive(tableView.rx.items(cellIdentifier: "CharacterTableViewCell", cellType: CharacterTableViewCell.self)) { (_, character, cell) in
-                    cell.config(with: character)
-                }
-                .addDisposableTo(disposeBag)
-        }
-    }
+    var characters: Variable<[Character]> = Variable<[Character]>.init([])
     var disposeBag: DisposeBag = DisposeBag()
     var selectedCharacter: Character?
     var isSearching: Variable<Bool> = Variable<Bool>.init(false)
@@ -42,6 +34,13 @@ class CharacterGroupViewController: UIViewController, UITableViewDelegate {
 
         setupTableView()
         setupSearch()
+        
+        characters
+            .asObservable()
+            .bindTo(tableView.rx.items(cellIdentifier: "CharacterTableViewCell", cellType: CharacterTableViewCell.self)) { (_, character, cell) in
+                cell.config(with: character)
+            }
+            .addDisposableTo(disposeBag)
     
     }
     
@@ -56,6 +55,7 @@ class CharacterGroupViewController: UIViewController, UITableViewDelegate {
         
         tableView.register(UINib(nibName: "CharacterTableViewCell", bundle: nil), forCellReuseIdentifier: "CharacterTableViewCell")
         
+        // Cell selection
         tableView
             .rx
             .modelSelected(Character.self)
@@ -66,14 +66,15 @@ class CharacterGroupViewController: UIViewController, UITableViewDelegate {
             })
             .addDisposableTo(disposeBag)
         
+        // Lazy loading
         tableView
         .rx
         .contentOffset
+            .throttle(0.7, scheduler: MainScheduler.instance)
             .subscribe(onNext: {
                 [weak self] contentOffset in
-                let heightToReach = (self?.allCharacters.count ?? 0) * 100
-                print("HEIGHT TO REACH: \(heightToReach) \n CONTENT OFFSET: \(contentOffset.y)")
-                if contentOffset.y >= CGFloat(heightToReach) {
+                let shouldLoadMore = contentOffset.y + (self?.tableView.frame.size.height)! + 80.0 > (self?.tableView.contentSize.height)!
+                if shouldLoadMore {
                     self?.callService()
                 }
             },
@@ -85,6 +86,7 @@ class CharacterGroupViewController: UIViewController, UITableViewDelegate {
     
     // MARK: - Search Bar -
     func setupSearch() {
+        // Toggle search
         btnSearch
             .rx
             .tap

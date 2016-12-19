@@ -70,7 +70,7 @@ class CharacterGroupViewController: UIViewController, UITableViewDelegate {
         tableView
         .rx
         .contentOffset
-            .throttle(0.7, scheduler: MainScheduler.instance)
+            .throttle(3, scheduler: MainScheduler.instance)
             .subscribe(onNext: {
                 [weak self] contentOffset in
                 let shouldLoadMore = contentOffset.y + (self?.tableView.frame.size.height)! + 80.0 > (self?.tableView.contentSize.height)!

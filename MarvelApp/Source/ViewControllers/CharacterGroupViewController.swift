@@ -16,6 +16,7 @@ class CharacterGroupViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var btnSearch: UIBarButtonItem!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var cnstSearchBarHeight: NSLayoutConstraint!
     // MARK: Variables
     var allCharacters: [Character] = [] {
         didSet {
@@ -86,17 +87,32 @@ class CharacterGroupViewController: UIViewController, UITableViewDelegate {
     
     // MARK: - Search Bar -
     func setupSearch() {
+        
+        cnstSearchBarHeight.constant = 0
+                
         // Toggle search
         btnSearch
             .rx
             .tap
-            .map {!self.isSearching.value}
+            .map {
+                
+                if !self.isSearching.value {
+                    self.searchBar.becomeFirstResponder()
+                    self.cnstSearchBarHeight.constant = 44
+                } else {
+                    self.searchBar.resignFirstResponder()
+                    self.cnstSearchBarHeight.constant = 0
+                }
+                
+                return !self.isSearching.value
+            }
             .bindTo(isSearching)
             .addDisposableTo(disposeBag)
         
         
         isSearching
             .asObservable()
+            .map{!$0}
             .bindTo(searchBar.rx.isHidden)
             .addDisposableTo(disposeBag)
         

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ci4-WM-79M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ci4-WM-79M">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,7 +12,7 @@
         <scene sceneID="NDS-I9-XUa">
             <objects>
                 <navigationController id="ci4-WM-79M" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="BKI-j6-eCP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="BKI-j6-eCP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,32 +38,36 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W6X-gL-NQV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <sections/>
-                            </tableView>
-                            <searchBar contentMode="redraw" placeholder="Find your Hero!" translatesAutoresizingMaskIntoConstraints="NO" id="WOg-5Q-7G2">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <scopeButtonTitles>
-                                    <string>Title</string>
-                                    <string>Title</string>
-                                </scopeButtonTitles>
+                            <searchBar hidden="YES" contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Find your Hero!" translatesAutoresizingMaskIntoConstraints="NO" id="WOg-5Q-7G2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="iXA-Hj-JEq"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.89019607840000003" green="0.14901960780000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="searchField.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="87M-UZ-Kls">
+                                <rect key="frame" x="0.0" y="44" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.89019607840000003" green="0.14901960780000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="W6X-gL-NQV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4sF-f8-xgT"/>
                             <constraint firstItem="WOg-5Q-7G2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6QW-gl-D5y"/>
-                            <constraint firstAttribute="trailing" secondItem="W6X-gL-NQV" secondAttribute="trailing" id="C7z-Tj-RIf"/>
+                            <constraint firstItem="87M-UZ-Kls" firstAttribute="top" secondItem="WOg-5Q-7G2" secondAttribute="bottom" id="9Ug-c6-q7E"/>
                             <constraint firstItem="WOg-5Q-7G2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="E28-3S-0f3"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W6X-gL-NQV" secondAttribute="bottom" id="LNa-ex-e9i"/>
+                            <constraint firstItem="87M-UZ-Kls" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KNT-uL-3KE"/>
                             <constraint firstAttribute="trailing" secondItem="WOg-5Q-7G2" secondAttribute="trailing" id="RBU-5x-GDa"/>
-                            <constraint firstItem="W6X-gL-NQV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="okH-fL-yCu"/>
+                            <constraint firstAttribute="trailing" secondItem="87M-UZ-Kls" secondAttribute="trailing" id="hAI-Ya-AkL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="87M-UZ-Kls" secondAttribute="bottom" id="xCm-wE-ZgR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Heroes" id="7eT-e9-R3y">
@@ -73,14 +77,15 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btnSearch" destination="UXV-OU-KUz" id="8WL-Ek-4eW"/>
+                        <outlet property="cnstSearchBarHeight" destination="iXA-Hj-JEq" id="T55-cE-F7x"/>
                         <outlet property="searchBar" destination="WOg-5Q-7G2" id="mFp-j8-qRO"/>
-                        <outlet property="tableView" destination="W6X-gL-NQV" id="ymo-bR-6yQ"/>
+                        <outlet property="tableView" destination="87M-UZ-Kls" id="JmV-PC-YP1"/>
                         <segue destination="E98-5K-NNp" kind="show" identifier="CharacterDetail" id="LUe-z5-yXA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="161" y="139"/>
+            <point key="canvasLocation" x="151" y="139"/>
         </scene>
         <!--Character Detail View Controller-->
         <scene sceneID="5dI-ZE-fCh">
@@ -91,11 +96,11 @@
                         <viewControllerLayoutGuide type="bottom" id="GN4-Fa-uMh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8C7-vI-3eK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LEn-Ql-j9M">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
